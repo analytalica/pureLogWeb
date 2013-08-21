@@ -1,0 +1,88 @@
+p{
+font-family: Helvetica, Arial, sans-serif;
+}
+div#centerCol {
+margin:0 auto;
+max-width: 1020px;
+background:white;
+padding:10px;
+}
+div#center {
+margin:0 auto;
+text-align: center;
+}
+body, html {
+	/*background: url(bf3coop.jpg) no-repeat center center fixed;*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body#serverAll a#serverNav,
+body#server7 a#serverNav,
+body#server30 a#serverNav
+{
+background-color:#333333;
+}
+body#serverAll a#serverAllNav,
+body#server7 a#server7Nav,
+body#server30 a#server30Nav
+{
+background-color:#0066CC;
+}
+ul.parentMenu
+{
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 110%;
+list-style-type:none;
+margin:0;
+padding:0;
+padding-top:6px;
+padding-bottom:6px;
+}
+ul.parentMenu li
+{
+display:inline;
+}
+ul.parentMenu a:link,ul.parentMenu a:visited
+{
+font-weight:bold;
+color:#FFFFFF;
+background-color:#777777;
+text-align:center;
+padding:6px;
+text-decoration:none;
+text-transform:uppercase;
+}
+ul.parentMenu a:hover,ul.parentMenu a:active
+{
+background-color:#333333;
+}
+ul.childMenu
+{
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 80%;
+list-style-type:none;
+margin:0;
+padding:0;
+padding-top:6px;
+padding-bottom:6px;
+}
+ul.childMenu li
+{
+display:inline;
+}
+ul.childMenu a:link,ul.childMenu a:visited
+{
+font-weight:bold;
+color:#FFFFFF;
+background-color:#003366;
+text-align:center;
+padding:4px;
+text-decoration:none;
+text-transform:uppercase;
+}
+ul.childMenu a:hover,ul.childMenu a:active
+{
+background-color:#0066CC;
+}
