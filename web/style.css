@@ -7,9 +7,33 @@ max-width: 1020px;
 background:white;
 padding:10px;
 }
-div#center {
+div.center {
+position:relative;
 margin:0 auto;
 text-align: center;
+}
+div.chart {
+position:relative;
+float:left;
+width: 500px;
+height: 600px;
+text-align:center;
+margin-bottom: 6px;
+}
+div.chart img{
+position:relative;
+z-index: 2;
+}
+div.loading {
+position:absolute;
+font-family: Helvetica, Arial, sans-serif;
+font-size:60%;
+width: 200px;
+height: 120px;
+left: 150px;
+top:240px;
+text-align:center;
+z-index: 1;
 }
 body, html {
 	/*background: url(bf3coop.jpg) no-repeat center center fixed;*/

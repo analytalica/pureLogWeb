@@ -5,8 +5,18 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body id="server30">
-<div id="centerCol"><div id="center">
-<img src="chartCQ30.php"></img><img src="chartRUSH30.php"></img></div>
+<div id="centerCol"><div class="center">
+<div class="chart">
+<div class="loading">
+<img src="images/loading.gif" /><br/>Loading... If you see this for more than 3 seconds, refresh the page.</div>
+<img src="chartCQ30.php" alt="Conquest Server Last 30 Days"></img>
+</div>
+<div class="chart">
+<div class="loading">
+<img src="images/loading.gif" /><br/>Loading... If you see this for more than 3 seconds, refresh the page.</div>
+<img src="chartRUSH30.php" alt="Rush Server Last 30 Days"></img>
+</div>
+</div>
 <?php include("main.php"); ?>
 </div>
 </body>
