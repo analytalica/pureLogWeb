@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>pureLog 1.2 Web Interface</title>
+<title>pureLog Web Interface</title>
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
