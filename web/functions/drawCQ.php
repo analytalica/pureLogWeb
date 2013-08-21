@@ -1,5 +1,4 @@
 <?php
-/* CAT:Bar Chart */
 
 /* Create and populate the pData object */
 $MyData = new pData();
@@ -7,6 +6,8 @@ $MyData->addPoints($minArray, "Player-Minutes");
 $MyData->setAxisName(0, "Player-Minutes");
 $MyData->addPoints($dateArray, "Date");
 $MyData->setAbscissa("Date");
+
+/* CAT:Bar Chart */
 
 /* Create the pChart object */
 $myPicture = new pImage(500, 600, $MyData);

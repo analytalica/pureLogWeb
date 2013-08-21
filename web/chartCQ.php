@@ -38,6 +38,7 @@ if ($dateArray == null || $minArray == null) {
 	$cached = false;
 }
 $arraysize = count($dateArray);
+
 include("functions/drawCQ.php");
 
 /* Render the picture (choose the best way) */
