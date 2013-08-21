@@ -33,8 +33,8 @@ if ($dateArray == null || $minArray == null) {
 	array_pop($minArray);
 
 	//Insert into cache
-	__c()->set("chartCQDefaultDate", $dateArray, 20);
-    __c()->set("chartCQDefaultMin", $minArray, 20);
+	__c()->set("chartCQDefaultDate", $dateArray, 600);
+    __c()->set("chartCQDefaultMin", $minArray, 600);
 	$cached = false;
 }
 $arraysize = count($dateArray);

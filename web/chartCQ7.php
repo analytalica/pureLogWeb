@@ -36,8 +36,8 @@ if ($dateArray == null || $minArray == null) {
 		$dateArray[$a] = $weekday;
 	}
 	//Insert into cache
-	__c()->set("chartCQ7Date", $dateArray, 20);
-    __c()->set("chartCQ7Min", $minArray, 20);
+	__c()->set("chartCQ7Date", $dateArray, 600);
+    __c()->set("chartCQ7Min", $minArray, 600);
 	$cached = false;
 }
 $arraysize = count($dateArray);
