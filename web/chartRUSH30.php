@@ -42,6 +42,8 @@ if ($dateArray == null || $minArray == null) {
 	$cached = false;
 }
 $arraysize = count($dateArray);
+
+$chartHeight = 950;
 include("functions/drawRUSH.php");
 
 /* Render the picture (choose the best way) */

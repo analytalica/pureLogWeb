@@ -1,4 +1,11 @@
 <?php
+if(!isset($chartWidth)){
+$chartWidth = 500;
+}
+if(!isset($chartHeight)){
+$chartHeight = 600;
+}
+
 /* CAT:Bar Chart */
 
 /* Create and populate the pData object */
@@ -9,7 +16,7 @@ $MyData->addPoints($dateArray, "Date");
 $MyData->setAbscissa("Date");
 
 /* Create the pChart object */
-$myPicture = new pImage(500, 600, $MyData);
+$myPicture = new pImage($chartWidth, $chartHeight, $MyData);
 
 /* Write the chart title */
 $myPicture->setFontProperties(array(
@@ -26,9 +33,12 @@ $myPicture->setFontProperties(array(
     "FontSize" => 9
 ));
 
+$graphAreaWidth = $chartWidth - 20;
+$graphAreaHeight = $chartHeight - 20;
+
 /* Set the graph area */
-$myPicture->setGraphArea(70, 60, 480, 580);
-$myPicture->drawGradientArea(70, 60, 480, 580, DIRECTION_HORIZONTAL, array(
+$myPicture->setGraphArea(70, 60, $graphAreaWidth, $graphAreaHeight);
+$myPicture->drawGradientArea(70, 60, $graphAreaWidth, $graphAreaHeight, DIRECTION_HORIZONTAL, array(
     "StartR" => 200,
     "StartG" => 200,
     "StartB" => 200,
@@ -88,6 +98,9 @@ $myPicture->setShadow(TRUE, array(
     "B" => 0,
     "Alpha" => 10
 ));
+
+$bestFitFormat = array("R"=>0,"G"=>255,"B"=>222,"Alpha"=>65);
+$myPicture->drawBestFit($bestFitFormat);
 
 /* Draw the chart */
 //$myPicture->drawBarChart(array("Rounded"=>TRUE,"Surrounding"=>30));

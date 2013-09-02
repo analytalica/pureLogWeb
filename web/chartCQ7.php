@@ -42,6 +42,7 @@ if ($dateArray == null || $minArray == null) {
 }
 $arraysize = count($dateArray);
 
+$chartHeight = 450;
 include("functions/drawCQ.php");
 
 /* Render the picture (choose the best way) */

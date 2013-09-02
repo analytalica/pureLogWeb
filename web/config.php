@@ -12,7 +12,7 @@ A URL with double dots at the start, like "../another.html", references the pare
 A URL with a slash at the start, like "/dir1/dir2/stuff.html", references a page at a path starting from the root of the server. 
 
 You can stack these context modifiers.
-By default it is a relative URL that points two directories upwards (using 2x ../).
+By default it is a relative URL that points 3 directories upwards (using 3x ../).
 */
-include("../../connections.php");
+include("../../../connections.php");
 ?>

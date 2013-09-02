@@ -38,6 +38,7 @@ if ($dateArray == null || $minArray == null) {
 	$cached = false;
 }
 $arraysize = count($dateArray);
+$chartHeight = 1250;
 include("functions/drawRUSH.php");
 /* Render the picture (choose the best way) */
 $myPicture->autoOutput("pictures/example.drawBarChart.poll.png");
