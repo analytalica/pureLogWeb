@@ -1,25 +1,16 @@
 <?php
-include("config.php");
-
-/* pChart library inclusions */
-include("library/class/pData.class.php");
-include("library/class/pDraw.class.php");
-include("library/class/pImage.class.php");
-include("phpfastcache/phpfastcache.php");
-phpFastCache::$storage = "files";
-
 //Get arrays from cache
-$dateArray = __c()->get("chartCQ7Date");
-$minArray  = __c()->get("chartCQ7Min");
+$dateArray = __c()->get($chartName . "Date");
+$minArray  = __c()->get($chartName . "Min");
 $cached    = true;
 
 //Got from cache?
 if ($dateArray == null || $minArray == null) {
-    if (!$conCQ) {
-        die('Could not connect: ' . mysqli_error($conCQ));
+    if (!$chartCon) {
+        die('Could not connect: ' . mysqli_error($chartCon));
     }
-    $getAll = "(SELECT * FROM " . $conCQDB . "." . $conCQTable . " ORDER BY id DESC LIMIT 8) ORDER BY id ASC;";
-    $table = mysqli_query($conCQ, $getAll) or die(mysqli_error($conCQ));
+    $getAll = "(SELECT * FROM " . $chartDB . "." . $chartTable . " ORDER BY id DESC LIMIT " . $chartLimit . ") ORDER BY id ASC;";
+    $table = mysqli_query($chartCon, $getAll) or die(mysqli_error($chartCon));
     $dateArray = array();
     $minArray  = array();
     $arraysize = 0;
@@ -41,10 +32,4 @@ if ($dateArray == null || $minArray == null) {
 	$cached = false;
 }
 $arraysize = count($dateArray);
-
-$chartHeight = 450;
-include("functions/drawCQ.php");
-
-/* Render the picture (choose the best way) */
-$myPicture->autoOutput("pictures/example.drawBarChart.poll.png");
 ?>

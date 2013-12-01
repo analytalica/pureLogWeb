@@ -1,4 +1,5 @@
 <?php
+
 if(!isset($chartWidth)){
 $chartWidth = 500;
 }
@@ -23,7 +24,7 @@ $myPicture->setFontProperties(array(
     "FontName" => "library/fonts/Forgotte.ttf",
     "FontSize" => 15
 ));
-$myPicture->drawText(20, 34, "pureLog Conquest Server Stats", array(
+$myPicture->drawText(14, 34, $chartTitle, array(
     "FontSize" => 20
 ));
 
@@ -34,11 +35,11 @@ $myPicture->setFontProperties(array(
 ));
 
 $graphAreaWidth = $chartWidth - 20;
-$graphAreaHeight = $chartHeight - 20;
+$graphAreaHeight = $chartHeight - 16;
 
 /* Set the graph area */
-$myPicture->setGraphArea(70, 60, $graphAreaWidth, $graphAreaHeight);
-$myPicture->drawGradientArea(70, 60, $graphAreaWidth, $graphAreaHeight, DIRECTION_HORIZONTAL, array(
+$myPicture->setGraphArea(64, 60, $graphAreaWidth, $graphAreaHeight);
+$myPicture->drawGradientArea(64, 60, $graphAreaWidth, $graphAreaHeight, DIRECTION_HORIZONTAL, array(
     "StartR" => 200,
     "StartG" => 200,
     "StartB" => 200,
@@ -137,4 +138,7 @@ $myPicture->drawBarChart(array(
     "Surrounding" => 30,
     "OverrideColors" => $Palette
 ));
+
+/* Render the picture (choose the best way) */
+$myPicture->autoOutput("pictures/" . $chartName . ".png");
 ?>

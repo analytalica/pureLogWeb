@@ -1,11 +1,11 @@
 <?php
-include("config.php");
+require_once("config.php");
 
 /* pChart library inclusions */
-include("library/class/pData.class.php");
-include("library/class/pDraw.class.php");
-include("library/class/pImage.class.php");
-include("phpfastcache/phpfastcache.php");
+require_once("library/class/pData.class.php");
+require_once("library/class/pDraw.class.php");
+require_once("library/class/pImage.class.php");
+include_once("phpfastcache/phpfastcache.php");
 phpFastCache::$storage = "files";
 
 ?>

@@ -6,7 +6,7 @@
 </ul>
 <ul class="childMenu">
 <li><a href="ss7.php" id="server7Nav">Last 7 Days</a></li>
-<li><a href="index.php" id="server30Nav">Last 30 Days</a></li>
+<li><a href="ss30.php" id="server30Nav">Last 30 Days</a></li>
 <li><a href="ssAll.php" id="serverAllNav">All Time</a></li>
 </ul></div>
 <p>pureLog is a plugin for PRoCon that logs game server popularity in a MySQL database by measuring player-minutes spent in game. 
