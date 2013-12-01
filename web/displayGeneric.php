@@ -31,6 +31,7 @@ foreach($displayArray as $image){
 </table> 
 </div>
 <div id="centerCol">
+<?php include("navigationGeneric.php"); ?>
 <?php include("main.php"); ?>
 </div>
 </body>

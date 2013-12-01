@@ -40,39 +40,35 @@ text-align:center;
 z-index: 1;
 }
 body, html {
-	/*background: url(bf3coop.jpg) no-repeat center center fixed;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
-body#serverAll a#serverNav,
-body#server7 a#serverNav,
-body#server30 a#serverNav
-{
+a.parentActive, a.parentActive:visited, a.parentActive:hover, a.parentActive:active {
 background-color:#333333;
+color:#FFFFFF;
 }
-body#serverAll a#serverAllNav,
-body#server7 a#server7Nav,
-body#server30 a#server30Nav
-{
+a.childActive, a.childActive:visited, a.childActive:hover, a.childActive:active {
 background-color:#0066CC;
+color:#FFFFFF;
 }
-ul.parentMenu
+
+ul#parentMenu
 {
 font-family: Tahoma, Geneva, sans-serif;
 font-size: 110%;
 list-style-type:none;
-margin:0;
+margin:0 0 2px 0;
 padding:0;
 padding-top:6px;
 padding-bottom:6px;
 }
-ul.parentMenu li
+ul#parentMenu li
 {
 display:inline;
 }
-ul.parentMenu a:link,ul.parentMenu a:visited
+ul#parentMenu a:link
 {
 font-weight:bold;
 color:#FFFFFF;
@@ -82,11 +78,14 @@ padding:6px;
 text-decoration:none;
 text-transform:uppercase;
 }
-ul.parentMenu a:hover,ul.parentMenu a:active
+ul#parentMenu a:visited{
+color:#FFFFFF;
+}
+ul#parentMenu a:hover,ul#parentMenu a:active
 {
 background-color:#333333;
 }
-ul.childMenu
+ul#childMenu
 {
 font-family: Tahoma, Geneva, sans-serif;
 font-size: 80%;
@@ -96,11 +95,11 @@ padding:0;
 padding-top:6px;
 padding-bottom:6px;
 }
-ul.childMenu li
+ul#childMenu li
 {
 display:inline;
 }
-ul.childMenu a:link,ul.childMenu a:visited
+ul#childMenu a:link
 {
 font-weight:bold;
 color:#FFFFFF;
@@ -110,7 +109,10 @@ padding:4px;
 text-decoration:none;
 text-transform:uppercase;
 }
-ul.childMenu a:hover,ul.childMenu a:active
+ul#childMenu a:visited{
+color:#FFFFFF;
+}
+ul#childMenu a:hover,ul#childMenu a:active
 {
 background-color:#0066CC;
 }
